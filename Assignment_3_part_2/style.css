@@ -1,5 +1,10 @@
 /* General setup */
-
+<!-- 
+Name: Michael Mcdonald
+File: BiographyPage.html
+Date: 15 October 2025
+A school homepage
+-->
 * {
   box-sizing: border-box;
 }
@@ -53,6 +58,7 @@ body {
   max-width: 1400px;
 	font-family: "Cormorant Garamond", serif;
 	font-weight: 500;
+	font-size: 1.2em;
 }
 h1 {
 	font-family: "Crimson Text", serif;
