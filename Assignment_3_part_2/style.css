@@ -5,6 +5,7 @@ File: BiographyPage.html
 Date: 15 October 2025
 A school homepage
 -->
+
 * {
   box-sizing: border-box;
 }
@@ -51,6 +52,7 @@ A school homepage
   font-weight: <weight>;
   font-style: normal;
 }
+
 body {
   margin: 0 auto;
   padding: 0 20px;
@@ -59,15 +61,44 @@ body {
 	font-family: "Cormorant Garamond", serif;
 	font-weight: 500;
 	font-size: 1.2em;
+	line-height: 1.2;
+	letter-spacing: 1px;
 }
 h1 {
 	font-family: "Crimson Text", serif;
 	font-weight: 700;
+	text-align: center;
+	letter-spacing: 1px;
 }
 h2 {
 	font-family: "Crimson Text", serif;
 	font-weight: 700;
+	margin-bottom: auto;
+	letter-spacing: 1px;
 }
+section {
+	text-indent:2rem;
+}
+a:visited{
+	color: #aa6666;
+}
+a:hover,
+a:focus {
+	text-decoration: none;
+	outline: none;
+}
+a[href^="http"]::after {
+	content: "";
+  	display: inline-block;
+  	width: 0.5em;
+  	height: 0.5em;
+  	margin-left: 0.25em;
+
+  	background-size: 100%;
+  	background-image: url("external-link-52.png");
+}
+
+
 /* Layout */
 
 main {
