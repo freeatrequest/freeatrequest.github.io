@@ -1,8 +1,10 @@
 /* General setup */
 <!-- 
 Name: Michael Mcdonald
-File: BiographyPage.html
+File: style.css
 Date: 15 October 2025
+INFT1206 – Web Development Fundamentals
+
 A school homepage
 -->
 
@@ -98,7 +100,26 @@ a[href^="http"]::after {
   	background-image: url("external-link-52.png");
 }
 
-
+ul {
+	margin: 0 auto;
+	line-height: 1.2;
+	list-style-type: square;
+}
+nav li{
+	list-style-type: none;
+}
+nav li a {
+	text-decoration: none;
+	font-family: "Crimson Text", serif;
+	font-weight: 700;
+	font-size: 30px;
+	text-align: center;
+	letter-spacing: 1px;
+	display: inline-block;
+	border: 1px solid #aa6666;
+	width: 100%; 
+	text-transform: uppercase;
+}
 /* Layout */
 
 main {
