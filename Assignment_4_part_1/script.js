@@ -1,3 +1,12 @@
+<!-- 
+Name: Michael Mcdonald
+File: index.html
+Date: 10 November 2025
+INFT1206 – Web Development Fundamentals
+
+Random Story Generator Script
+-->
+
 // Complete variable definitions and random functions
 
 const customName = document.getElementById("custom-name");
