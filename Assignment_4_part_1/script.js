@@ -1,12 +1,12 @@
-<!-- 
+/*
 Name: Michael Mcdonald
 File: index.html
 Date: 10 November 2025
 INFT1206 – Web Development Fundamentals
 
 Random Story Generator Script
--->
-
+*/
+//alert("IN script file");
 // Complete variable definitions and random functions
 
 const customName = document.getElementById("custom-name");
@@ -40,13 +40,16 @@ const events = [
 // Partial return random string function
 
 function returnRandomStoryString() {
-const randomCharacter = randomValueFromArray(characters);
-const randomePlace = randomValueFromArray(places);
-const randomEvent = randomValueFromArray(events);
+	const randomCharacter = randomValueFromArray(characters);
+	const randomPlace = randomValueFromArray(places);
+	const randomEvent = randomValueFromArray(events);
 
- let storyText =  "It was 94 Fahrenheit outside, so ${randomCharacter} went for a walk. When they got to ${randomePlace}, they stared in horror for a few moments, then ${randomEvent}. Bob saw the whole thing, but was not surprised — ${randomCharacter} weighs 300 pounds, and it was a hot day."
+ 	let storyText =  "It was 94 Fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day."
+        storyText = storyText.replaceAll(":insertx:", randomCharacter);
+  	storyText = storyText.replaceAll(":inserty:", randomPlace);
+  	storyText = storyText.replaceAll(":insertz:", randomEvent);
 
-  return storyText;
+	return storyText;
 } 
 
 // Event listener and partial generate function definition
@@ -60,12 +63,13 @@ function generateStory() {
     const name = customName.value;
     newStory = newStory.replace("Bob", name);
   }
+  
 
   if (document.getElementById("uk").checked) {
-    const weight = '${Math.round(300/14)} stone';
-    const temperature = '${Math.round((94-32)*5/9)} Celcius';
+    const weight = `${Math.round(300/14)} stone`;
+    const temperature = `${Math.round((94-32)*5/9)} Celcius`;
     	newStory = newStory.replace("300 pounds", weight);
-	newStory = newStory.replace("94 Farenheit", temperature);	
+	newStory = newStory.replace("94 Fahrenheit", temperature);	
   }
 
   // TODO: replace "" with the correct expression
