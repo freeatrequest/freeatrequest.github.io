@@ -13,9 +13,7 @@ const thumbBar = document.querySelector(".thumb-bar");
 const btn = document.querySelector("button");
 const overlay = document.querySelector(".overlay");
 
-const images = {
 
-}
 
 const images = [
 {filename: "pic1.jpg", alt: "Closeup of a human eye"},
@@ -24,3 +22,33 @@ const images = [
 {filename: "pic4.jpg", alt: "Section of wall from a pharoh's tomb"},
 {filename: "pic5.jpg", alt: "large moth on a leaf"}
 ];
+
+const baseURL = 
+	"https://mdn.github.io/shared-assets/images/examples/learn/gallery/";
+for (const image of images) {
+	const newimage = document.createElement("img");
+	newimage.src = `${baseURL}${image.filename}`;
+	newimage.alt = image.alt;
+	newimage.tabIndex = "0";
+	thumbBar.appendChild(newimage);
+	newimage.addEventListener("click", updateDisplayedImage);
+	newimage.addEventListener("keydown", (e) => {
+		if(e.code === "Enter") {
+			updateDisplayedImage(e);
+		}
+	});
+}
+
+function updateDisplayedImage(e) {
+	displayedImage.src = e.target.src;
+	displayedImage.alt = e.target.alt;
+}
+
+btn.addEventListener("click", () => {
+	if(btn.textContent = "Lighten";
+	overlay.style.backgroundColor = "rgb(000/0.50";
+} else {btn.textContent = "Darken";
+	overlay.style.backgroundColor = "rgb(000/0)";
+}
+btn.classList.toggle("dark");
+});
