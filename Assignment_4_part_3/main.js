@@ -1,11 +1,11 @@
-,m\* 
+/* 
 Name: Michael Mcdonald
 File: index.html
 Date: 18 November 2025
 INFT1206 – Web Development Fundamentals
 
 bouncing balls
-*\
+*/
 
 // set up canvas
 
@@ -36,7 +36,6 @@ class Ball {
     this.color = color;
     this.size = size;
   }
-
   draw() {
     ctx.beginPath();
     ctx.fillStyle = this.color;
