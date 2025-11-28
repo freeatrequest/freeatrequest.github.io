@@ -30,7 +30,7 @@ for (const image of images) {
 	newImage.src = `${baseURL}${image.filename}`;
 	newImage.alt = image.alt;
 	newImage.tabIndex = "0";
-	thumbBar.appendChild(newimage);
+	thumbBar.appendChild(newImage);
 	newImage.addEventListener("click", updateDisplayedImage);
 	newImage.addEventListener("keydown", (e) => {
 		if(e.code === "Enter") {
@@ -46,8 +46,8 @@ function updateDisplayedImage(e) {
 
 btn.addEventListener("click", () => {
 	if(btn.classList.contains("dark")){
-	btn.textContent === "Lighten";
-	overlay.style.backgroundColor = "rgb(0 0 0/ 0.50";
+	btn.textContent = "Lighten";
+	overlay.style.backgroundColor = "rgb(0 0 0/ 0.50)";
 } else {btn.textContent = "Darken";
 	overlay.style.backgroundColor = "rgb(0 0 0/ 0)";
 }
