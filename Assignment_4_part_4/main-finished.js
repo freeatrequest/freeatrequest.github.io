@@ -15,6 +15,7 @@ const ctx = canvas.getContext("2d");
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
+
 // function to generate random number
 
 function random(min, max) {
@@ -101,7 +102,40 @@ class EvilCircle extends Shape {
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.stroke();
   }
+	  update() {
+    if (this.x + this.size >= width) {
+      this.x = width - this.size;
+    }
+
+    if (this.x - this.size <= 0) {
+      this.x = this.size;
+    }
+
+    if (this.y + this.size >= height) {
+      this.y = height - this.size;
+    }
+
+    if (this.y - this.size <= 0) {
+      this.y = this.y;
+    }  
+  }
+	collisionDetect() {
+  	  
+    for (const ball of balls) {
+      if (ball.exists) {
+        const dx = this.x - ball.x;
+        const dy = this.y - ball.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < this.size + ball.size) {
+          ball.exists = false;
+        }
+      }
+    }	
+  }
 }
+
+const evil = new EvilCircle(10,10);
 const balls = [];
 
 window.addEventListener("keydown", (e) => {
@@ -142,12 +176,17 @@ function loop() {
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
+  if (ball.exists) {  
     ball.draw();
     ball.update();
     ball.collisionDetect();
-  }
+	}
+    }
+    evil.draw();
+    evil.update();
+    evil.collisionDetect();
 
-  requestAnimationFrame(loop);
+  requestAnimationFrame(loop);{
 }
-
+}
 loop();
