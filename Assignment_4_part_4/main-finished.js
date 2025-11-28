@@ -1,10 +1,10 @@
 /*
 Name: Michael Mcdonald
 File: index.html
-Date: 18 November 2025
+Date: 28 November 2025
 INFT1206 – Web Development Fundamentals
 
-Image Gallery
+Bouncing Balls with features
 */
 
 // set up canvas
