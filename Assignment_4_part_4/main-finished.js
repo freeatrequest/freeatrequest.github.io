@@ -44,13 +44,8 @@ class Ball extends Shape {
     this.size = size;
 	this.exists = true;
   }
-class EvilCircle extends Shape {
-	constructor(x, y)
-	super(x, y, 20, 20);
-	this.color = white;
-	this.size = 10;
-}
-  draw() {
+
+	  draw() {
     ctx.beginPath();
     ctx.fillStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -93,7 +88,20 @@ class EvilCircle extends Shape {
     }
   }
 }
-
+class EvilCircle extends Shape {
+	constructor(x, y){
+	super(x, y, 20, 20);
+	this.color = "white";
+	this.size = 10;
+}
+  draw() {
+    ctx.beginPath();
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = this.color;
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.stroke();
+  }
+}
 const balls = [];
 
 window.addEventListener("keydown", (e) => {
