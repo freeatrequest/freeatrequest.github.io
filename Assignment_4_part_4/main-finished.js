@@ -102,7 +102,7 @@ class EvilCircle extends Shape {
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.stroke();
   }
-	  update() {
+	  checkBounds() {
     if (this.x + this.size >= width) {
       this.x = width - this.size;
     }
@@ -141,16 +141,16 @@ const balls = [];
 window.addEventListener("keydown", (e) => {
   switch (e.key) {
     case "a":
-      this.x -= this.velX;
+      evil.x -= evil.velX;
       break;
     case "d":
-      this.x += this.velX;
+      evil.x += evil.velX;
       break;
     case "w":
-      this.y -= this.velY;
+      evil.y -= evil.velY;
       break;
     case "s":
-      this.y += this.velY;
+      evil.y += evil.velY;
       break;
   }
 });
@@ -183,7 +183,7 @@ function loop() {
 	}
     }
     evil.draw();
-    evil.update();
+    evil.checkBounds();
     evil.collisionDetect();
 
   requestAnimationFrame(loop);{
