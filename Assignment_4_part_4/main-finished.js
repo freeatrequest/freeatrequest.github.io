@@ -15,6 +15,7 @@ const ctx = canvas.getContext("2d");
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
+const para = document.querySelector("p");
 
 // function to generate random number
 
@@ -185,7 +186,8 @@ function loop() {
     evil.draw();
     evil.checkBounds();
     evil.collisionDetect();
-
+  
+    para.textContent = "Ball Count: " + balls.filter(ball => ball.exists).length;
   requestAnimationFrame(loop);{
 }
 }
