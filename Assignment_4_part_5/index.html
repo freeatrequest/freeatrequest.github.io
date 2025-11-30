@@ -19,87 +19,176 @@ Form Challenge
   <body>
     <h1>We want your feedback!</h1>
 	<p>
-    We're very excited that you visited the little house in the woods,
+    We're very excited that you visited the <a href = "#">little house in the woods</a>,
     and we want to hear what you thought of it! Please fill in the below
     sections. You don't need to provide your name or contact details, but
-    if you do, we'll enter you into a prize draw where you'll have a chance
+    if you do, we'll enter you into a <a href = "#">prize draw</a> where you'll have a chance
     to win prizes.
-
 	</p>
-    --
-<form>
-    Facilities
+     <img
+      src="https://mdn.github.io/shared-assets/images/examples/learn/woodland-strip.jpg"
+      alt="" />
 
-    <p>Was the porridge</p>
+<form>
+    <div class = "form-section">
+	<h2>Facilities</h2>
+    <fieldset>
+    
+    </div>
+	<div class = "form-section">
+    <legend>Was the porridge</legend>
+	<div class = "separator">
     <label>
 	<input type = "radio" name = "porridge" value = "too-hot" checked>
     Too hot?
     </label>
+	</div>
+	
+	<div class = "separator"> 
     <label>
    	<input type = "radio" name = "porridge" value = "too-cold">
     Too cold?
     </label>
+	</div>
+
+	<div class = "separator">
     <label>
 	<input type = "radio" name = "porridge" value = "just-right">
     Just right?
     </label>
-    
-    <p>Were the beds</p>
+	</div>
+    </fieldset>
+    	</div>
+	
+	<div class = "form-section">
+    <fieldset>
+    <legend>Were the beds</legend>
+	<div class = "separator">
 	<label>
 	<input type = "radio" name = "beds" value = "too-hard" checked>
     Too hard?
 	</label>
+	</div>
+
+	<div class = "separator">
 	<label>
 	<input type = "radio" name = "beds" value = "too-soft">
     Too soft?
 	</label>
+	</div>
+
+	<div class = "separator">
 	<label>
 	<input type = "radio" name = "beds" value = "just-right">
     Just right?
 	</label>
-    <fieldset>
-    <p>Describe the chairs (select all you agree with)</p>
-    Comfy
-    Luxurious
-    Hi tec
-    Pretty
-    Majestic
+	</div>
     </fieldset>
-    --
+   	</div>
 
-    About your hosts
+	<div class = "form-section">
+    <fieldset>
+    <legend>Describe the chairs</legend>
+	<legend>(select all you agree with)</legend>
+	<div class = "separator">
+    <label>
+	<input type = "checkbox" name = "chairs" value = "comfy">
+	Comfy
+    </label>    
+	</div>
 
-    Who's your favorite bear?
-    Papa bear
-    Mama bear
-    Junior
-    Dozer
+	<div class = "separator">
+    <label>
+	<input type = "checkbox" name = "chairs" value = "luxurious">
+    	Luxurious
+    </label>
+	</div>
 
-    Which greeting did you prefer?
-    Wave
-    Friendly greeting
-    Growl
-    Claw marks in the door
+	<div class = "separator">
+    <label>
+	<input type = "checkbox" name = "chairs" value = "hi-tech">
+	Hi tech
+    </label>
+	</div>
 
-    --
+	<div class = "separator">
+    <label>
+	<input type = "checkbox" name = "chairs" value = "pretty">
+	Pretty
+    </label>
+	</div>
 
-    Any other feedback?
+	<div class = "separator">
+    <label>
+	<input type = "checkbox" name = "chairs" value = "majestic">
+        Majestic
+    </label>
+	</div>
+	</div>	
+    </fieldset>
 
-    Give us your comments
+    	<div class = "form-section">
+    <fieldset>	
+    <h2>About your hosts</h2>
+	
+	
+	<div class = "separator">
+	
+    <label for = "favourite-bear">Who's your favorite bear?</label>
+    <select id = "favourite-bear" name = "favourite-bear">
+    <option value = "papa-bear">Papa bear</option>
+    <option value = "mama-bear">Mama bear</option>
+    <option value = "junior">Junior</option>
+    <option value = "dozer">Dozer</option>
+    </select>
+	</fieldset>
+	</div>
 
-    --
+	<div class = "form-section">
+	<fieldset>
+    <div class = "separator">	
+    <label for = "preferred-greeting">Which greeting did you prefer?</label>
+    	<select id = "preferred-greeting" name = "preferred-greeting">
+    <option value = "wave">Wave</option>
+    <option value = "friendly">Friendly greeting</option>
+    <option value - "growl">Growl</option>
+    <option value = "claw-marks">Claw marks in the door</option>
+	</select>
+	</div>
+	</fieldset>
+    	</div>
+	
+	<div class = "form-section">
+	<fieldset>
+    <h2>Any other feedback?</h2>
 
-    Your details
+    <label for = "feedback">Give us your comments</label><br>
+	<textarea id = "feedback" name = "feedback" rows = "5" cols = "40"></textarea>
+	</fieldset>
+    	</div>
 
-    Name
-    Email
-    Phone
-
-    --
-
-    Submit
-
-    --
+	<div class = "form-section">
+	<fieldset>
+    <h2>Your details</h2>
+	<p>
+    <label for = "name">Name</label>
+    <input type = "text" id = "name" name = "name">
+	</p>
+	<p>
+    <label for = "email">Email</label>
+	<input type = "email" id = "email" name = "email">
+	</p>
+	<p>
+    <label for = "phone">Phone</label>
+	<input type = "telephone" id = "phone" name = "phone">
+	</p>
+	</fieldset>
+    	</div>
+	
+	<div class = "form-section">
+    <button type = "submit">Submit</button>
+	</div>
+    
     </form>
   </body>
 </html>
